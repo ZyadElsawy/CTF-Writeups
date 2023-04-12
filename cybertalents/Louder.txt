@@ -1,0 +1,10 @@
+When I opened the challenge I had a .wav file that plays a sound with morse code 
+I downloaded the file and went to this website https://morsecode.world/international/decoder/audio-decoder-adaptive.html and uploaded the .wav file to decode.
+After decoding I got this : 
+
+T H E F L A G I S I A M S P E A K I N G L O U D E R T H A N B E F O R E
+
+You have to construct the flag like the format provided
+The final flag is : 
+
+FLAG{I AM SPEAKING LOUDER THAN BEFORE}

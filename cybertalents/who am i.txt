@@ -1,0 +1,20 @@
+When I opened the challenge url I found a login page that asks for a username and a password , I tried to view the page source and I found this comment :
+<!-- 
+     Guest Account:
+     -=-=-=-=-=-=-=-
+     Username:Guest
+     Password:Guest  
+-->
+
+After I logged in with this credentials I got a page displays this message :	
+
+Access Denied. You have no admin priviliges, Please login with an administrator account
+I opened the storage in the dev tools and navigated to cookies and I found this cookie :Authentication=bG9naW49R3Vlc3Q%3D
+The  value of the authentication cookie is base64 encoded and the = is url encoded "%3d"
+So I opened the burp decoder and decoded the value of the authentication cookie "bG9naW49R3Vlc3Q="
+I got this after decoding : login=Guest
+So I changed the login value to login=admin , and encoded this as base64 and replaced the = with %3d
+The final authentication cookie value is : bG9naW49YWRtaW4%3d
+I replaced the original value with our value and refreshed the page 
+We got the flag
+FLag{B@D_4uTh1Nt1C4Ti0n}

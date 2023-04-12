@@ -1,0 +1,9 @@
+When I opened the challenge url I got a form that asks for a username and a password 
+I tried admin/admin but I got invalid password , so I tried to out a ' after the username and a random password admin'/1234
+I got this error:
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cc5c41e820422fb0499dde7ac44e475f'' at line 1
+The username input field Is vulnerable to sql injection, so I tried to put in a basic payload to test for Boolean-based sql injection that will make the username check true and cancel the password check to bypass this login form
+So I tried this :
+admin' or 1=1# / 1234
+I got the flag:
+flag{!njection_3v3ry_wh3r3}
